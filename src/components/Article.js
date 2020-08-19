@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Header from "./Header";
 import axios from "axios";
 import moment from 'moment';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+
 
 
 class Article extends Component {
@@ -17,8 +19,9 @@ class Article extends Component {
 
     componentDidMount(){
         axios
-            .get("/getArticle/"+this.props.articleId)
+            .get("http://localhost:8080/getArticle/"+this.props.articleId)
             .then((res) => {
+                console.log(res.data);
                 console.log(res);
               this.setState({
                 article: res.data,
@@ -61,14 +64,15 @@ class Article extends Component {
                                 </div>
                             </div>
                         </header>
+                        <img src={this.state.article.image} alt=""/>
                         <div className="post-content markdown-body">
-                            {this.state.article.content}
+                            {ReactHtmlParser(this.state.article.content)}
                         </div>
                         <div className="row middle-xs">
                             <div className="col-xs-12">
                                 <div className="post-category">
                                     <a href="https://categories/thought/">
-                                        Thought
+                                        {this.state.article.typename}
                                     </a>
                                 </div>
                             </div>

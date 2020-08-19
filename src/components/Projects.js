@@ -1,107 +1,71 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import axios from "axios";
 
-import {Form, Button} from 'react-bootstrap';
+
+import {Form, Button, CardGroup, Card} from 'react-bootstrap';
+
+
+
 
 
 class Projects extends Component {
-    state = {  }
+    state = { 
+      projects:[]
+     }
+
+
+
+  componentDidMount(){
+
+  }
+
+
+
     render() { 
         return (  
-          <div id="posts-list">
-            <h1 className="taxonomy-term">Tech</h1>
-
-            <section>
-              <h1 className="site-date-catalog">2020</h1>
-              <div className="row posts-line">
-                <div className="posts-date col-xs-2">
-                  <time dateTime="2020-06-14 00:00:00 UTC">Jun 14</time>
-                </div>
-                <div className="posts-title col-xs-10">
-                  <div className="row">
-                    <div className="col-xs-12">
-                      <a href="https://blog.joway.io/posts/deep-into-distributed-filesystem/">分布式文件系统的演化</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row posts-line">
-                <div className="posts-date col-xs-2">
-                  <time dateTime="2020-05-13 00:00:00 UTC">May 13</time>
-                </div>
-                <div className="posts-title col-xs-10">
-                  <div className="row">
-                    <div className="col-xs-12">
-                      <a href="https://blog.joway.io/posts/how-animal-crossing-online-work/">从动物森友会聊主机游戏联机机制</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            
-            <div className="sub-header-line" />
-            
-            
-            <h1 className="taxonomy-term">Tech</h1>
-
-            <section>
-              <h1 className="site-date-catalog">2020</h1>
-              <div className="row posts-line">
-                <div className="posts-date col-xs-2">
-                  <time dateTime="2020-06-14 00:00:00 UTC">Jun 14</time>
-                </div>
-                <div className="posts-title col-xs-10">
-                  <div className="row">
-                    <div className="col-xs-12">
-                      <a href="https://blog.joway.io/posts/deep-into-distributed-filesystem/">分布式文件系统的演化</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row posts-line">
-                <div className="posts-date col-xs-2">
-                  <time dateTime="2020-05-13 00:00:00 UTC">May 13</time>
-                </div>
-                <div className="posts-title col-xs-10">
-                  <div className="row">
-                    <div className="col-xs-12">
-                      <a href="https://blog.joway.io/posts/how-animal-crossing-online-work/">从动物森友会聊主机游戏联机机制</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <div className="sub-header-line" />
-            <h1 className="taxonomy-term">Tech</h1>
-            <section>
-              <h1 className="site-date-catalog">2020</h1>
-              <div className="row posts-line">
-                <div className="posts-date col-xs-2">
-                  <time dateTime="2020-06-14 00:00:00 UTC">Jun 14</time>
-                </div>
-                <div className="posts-title col-xs-10">
-                  <div className="row">
-                    <div className="col-xs-12">
-                      <a href="https://blog.joway.io/posts/deep-into-distributed-filesystem/">分布式文件系统的演化</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row posts-line">
-                <div className="posts-date col-xs-2">
-                  <time dateTime="2020-05-13 00:00:00 UTC">May 13</time>
-                </div>
-                <div className="posts-title col-xs-10">
-                  <div className="row">
-                    <div className="col-xs-12">
-                      <a href="https://blog.joway.io/posts/how-animal-crossing-online-work/">从动物森友会聊主机游戏联机机制</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        );
+          <CardGroup>
+  <Card style={{margin: '10px'}}>
+    <Card.Img variant="top" src="https://picsum.photos/100/100" />
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This content is a little bit longer.
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+      <small className="text-muted">Last updated 3 mins ago</small>
+    </Card.Footer>
+  </Card>
+  <Card style={{margin: '10px'}}>
+    <Card.Img variant="top" src="https://picsum.photos/100/100" />
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This card has supporting text below as a natural lead-in to additional
+        content.{' '}
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+      <small className="text-muted">Last updated 3 mins ago</small>
+    </Card.Footer>
+  </Card>
+  <Card style={{margin: '10px'}}>
+    <Card.Img variant="top" src="https://picsum.photos/100/100" />
+    <Card.Body>
+      <Card.Title>Card title</Card.Title>
+      <Card.Text>
+        This is a wider card with supporting text below as a natural lead-in to
+        additional content. This card has even longer content than the first to
+        show that equal height action.
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+      <small className="text-muted">Last updated 3 mins ago</small>
+    </Card.Footer>
+  </Card>
+</CardGroup>);
     }
 }
  

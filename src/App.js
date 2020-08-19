@@ -15,11 +15,13 @@ class App extends Component {
     super(props);
     this.changePage = this.changePage.bind(this)
     this.mainContent = this.mainContent.bind(this)
+    this.changeLogin = this.changeLogin.bind(this)
 }
 
   state = { 
     currentPage: 'newPost',
     articleId: -1,
+    isLogin: false,
    }
 
    changePage(pageName, event) {
@@ -29,9 +31,15 @@ class App extends Component {
       })
    }
 
+   changeLogin() {
+    this.setState({
+        isLogin: !this.state.isLogin
+    });
+}
+
    mainContent = () => {
     if (this.state.currentPage === 'home'){
-      return (<Home changePage = {this.changePage} />)
+      return (<Home changePage = {this.changePage} isLogin = {this.state.isLogin} />)
     }
 
     if (this.state.currentPage === 'test'){
@@ -43,7 +51,7 @@ class App extends Component {
     }
 
     if (this.state.currentPage === 'login'){
-      return < Login></Login>
+      return < Login changeLogin = {this.changeLogin} changePage = {this.changePage}></Login>
     }
 
     if (this.state.currentPage === 'projects'){
@@ -51,7 +59,7 @@ class App extends Component {
     }
 
     if (this.state.currentPage === 'newPost'){
-      return <NewPost></NewPost>
+      return <NewPost changePage = {this.changePage}></NewPost>
     }
    }
 
