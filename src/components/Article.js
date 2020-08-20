@@ -21,8 +21,6 @@ class Article extends Component {
         axios
             .get("http://localhost:8080/getArticle/"+this.props.articleId)
             .then((res) => {
-                console.log(res.data);
-                console.log(res);
               this.setState({
                 article: res.data,
               });
@@ -64,8 +62,10 @@ class Article extends Component {
                                 </div>
                             </div>
                         </header>
+                        {/* {this.state.article.image} */}
                         <img src={this.state.article.image} alt=""/>
                         <div className="post-content markdown-body">
+                       
                             {ReactHtmlParser(this.state.article.content)}
                         </div>
                         <div className="row middle-xs">

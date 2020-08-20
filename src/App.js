@@ -8,6 +8,7 @@ import Article from './components/Article';
 import Login from './components/Login';
 import Projects from './components/Projects';
 import NewPost from './components/NewPost'
+import Type from './components/Type'
 
 class App extends Component {
 
@@ -22,12 +23,15 @@ class App extends Component {
     currentPage: 'newPost',
     articleId: -1,
     isLogin: false,
+    typename: ''
    }
 
    changePage(pageName, event) {
+     console.log(event !== undefined && event.target.getAttribute("data-typename"));
       this.setState({
         currentPage: pageName,
         articleId: event !== undefined && event.target.getAttribute("data-id"),
+        typename: event !== undefined && event.target.getAttribute("data-type"),
       })
    }
 
@@ -61,11 +65,16 @@ class App extends Component {
     if (this.state.currentPage === 'newPost'){
       return <NewPost changePage = {this.changePage}></NewPost>
     }
+
+    if (this.state.currentPage === 'type') {
+      return <Type typename={this.state.typename} />
+    }
+
+
    }
 
 
   render() {
-
 
     return (
       <div>
@@ -111,13 +120,13 @@ class App extends Component {
             
             
             <div className="site-footer">
-              <div className="site-footer-item"><a href="https://t.me/biosthinking" target="_blank">Telegram</a></div>
-              <div className="site-footer-item"><a href="https://mailchi.mp/a1a0d59e7a19/joway" target="_blank">Subscribe</a></div>
-              <div className="site-footer-item"><a href="https://blog.joway.io/index.xml" target="_blank">RSS</a>
+              <div className="site-footer-item"><a  target="_blank">Telegram</a></div>
+              <div className="site-footer-item"><a  target="_blank">Subscribe</a></div>
+              <div className="site-footer-item"><a  target="_blank">RSS</a>
               </div>
-              <div className="site-footer-item"><a href="https://blog.joway.io/travel" target="_blank">Travel</a>
+              <div className="site-footer-item"><a  target="_blank">Travel</a>
               </div>
-              <div className="site-footer-item"><a href="https://joway.io/" target="_blank">About</a></div>
+              <div className="site-footer-item"><a  target="_blank">About</a></div>
             </div>
           </div>
         </div>

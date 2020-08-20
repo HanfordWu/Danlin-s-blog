@@ -5,7 +5,7 @@ import axios from "axios";
 import moment from "moment";
 import { Badge } from "react-bootstrap";
 
-class Home extends Component {
+class Type extends Component {
     constructor(props) {
         super(props);
     }
@@ -14,28 +14,13 @@ class Home extends Component {
         articleList: [],
     };
 
-    printTypename(name){
-      console.log(name);
-    }
-
     displayArticles = () => {
+        console.log(this.state.articleList);
         return this.state.articleList.map((element, index) => {
-            console.log(element.year);
             return (
                 <section key={index}>
                     <h1 className="site-date-catalog">{element.year}</h1>
-                    {this.props.isLogin ? (
-                        <Badge
-                            pill
-                            variant="dark"
-                            inline
-                            onClick={(e) => this.props.changePage("newPost")}
-                        >
-                            New
-                        </Badge>
-                    ) : (
-                        ``
-                    )}
+                
                     {element.blogs.map((article, index) => {
                         return (
                             <div className="row posts-line" key={index}>
@@ -74,16 +59,7 @@ class Home extends Component {
                                             ``
                                         )}
 
-                                        <div className="col-xs-3 col-sm-2 posts-categories">
-                                            <div className="posts-category">
-                                                <a >
-                                                    <strong data-type={article.typename} onClick={event => this.props.changePage(
-                                                        "type", event)}>
-                                                        {article.typename}
-                                                    </strong>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -101,10 +77,10 @@ class Home extends Component {
 
     componentDidMount() {
         axios
-            .get("http://localhost:8080/getAllArticles")
+            .get("http://localhost:8080/getType?typename="+this.props.typename)
             .then((res) => {
                 this.setState({
-                    articleList: res.data,
+                    articleList: res.data
                 });
             })
             .catch((err) => {
@@ -113,8 +89,12 @@ class Home extends Component {
     }
 
     render() {
-        return <div id="posts-list">{this.displayArticles()}</div>;
+        return <div id="posts-list">
+<h1 className="taxonomy-term">{this.props.typename}</h1>
+
+            {this.displayArticles()}
+            </div>;
     }
 }
 
-export default Home;
+export default Type;
