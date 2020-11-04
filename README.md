@@ -15,17 +15,21 @@ Technics:
 Preview:
 
 Posts list page:
+
 ![alt](https://kgofjg.ch.files.1drv.com/y4mOCiwuQ0eyT2o0jc7Nyn7e0G8YZM3CIgXV8MQC7uHdTNUI3IDZVgIKI_f5n1MTnAFEKJKKPo0zr7SQ_aDHKSHGs_CMvF9a4SJw1J76benfNv96ZG_TL1PFNiM2MIxhevgVtVl1qdUhviGKQYlaitvi7dPER4b-v6xeLbMANJMpxvWGHoGnUPmAYWsB9T_u4d7UslXVBkCvlbKP9rliTfckw?width=884&height=904&cropmode=none)
 
 
 Article page:
+
 ![alt](https://kwofjg.ch.files.1drv.com/y4mSCXWOqqT1elhPvZD0kd86tZcnNRIY_Mps_Ig58LVr6mgw2Vf83CrC8G9Mp073G4qgLB78LDNer2M0KufN0bkWvUc61poVRTipRzJZf4lRBsvbkIHUcwvGqsH0t64E5TYYN8RgW3NAI4jXqUSvqnC9CIGUUedAImN1FZafy_pNsFk1--QqjOC10-sGJGOisSXGiuh_PPCZ1ERm3ZPqifl8Q?width=895&height=842&cropmode=none)
 
 
 Research showcase:
+
 ![alt](https://laofjg.ch.files.1drv.com/y4mIkwxHyy-GbsmRvOzFOgh47QbgfBHqSDMAoVppZcsNQGPlKcpAbt6qpRHabqcfhCj8xRPdsv5wo_n8hWrUpCX9tyvQZnjWatru9mZ6wAsF8pIVdpIsKHYR1MoDcI5GeMFlOyMYECdkC1tUhFfrykftDMwPxxVk9mwvtij-KzUDJbQGWvImzd0UCpGjcA7aJ8RhMx8bnGXGrJ3-nnZSoCdSw?width=944&height=758&cropmode=none)
 
 Administrator page:
+
 ![alt](https://jqofjg.ch.files.1drv.com/y4m04CXNYdLTVaq21nLHa1hr9xE2hi7MJWtZbwK5Ld5l3Avw6NDau1FUVAK_dFbvciwM8oBMjVkVGc5YuMyPSvwcqZKtkh2q8B4Bpfz6RDWiHsNuXvL7_pKWCbgsqMthW5PdNzqTyuV2n8ahuphkJqWn-5cbFta16bjq2tvyGGswmRpy1MO9q7kBbbV-FoS6xhx0mDGS41g2R3ugtIYR5WArw?width=900&height=541&cropmode=none)
 
 
